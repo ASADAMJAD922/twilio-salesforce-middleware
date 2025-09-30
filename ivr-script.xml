@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Say voice="alice">Welcome to Support IVR. Your case is being created or updated.</Say>
+  <Gather numDigits="1" action="/twilio/gather" method="POST" timeout="5">
+    <Say>Press 1 for billing, 2 for technical support, or 3 to speak to an agent.</Say>
+  </Gather>
+  <Say>No input detected. Redirecting.</Say>
+  <Redirect>/twilio/webhook</Redirect>
+</Response>
